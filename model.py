@@ -25,5 +25,4 @@ class Model:
         upstream_grad = self.criterion.backward(y, logits)
         for idx, layer in reversed(list(enumerate(self.layers))):
             upstream_grad, grad = layer.backward(self.optimizer.get_input(idx), upstream_grad)
-            updated_weights = self.optimizer.weights_update(grad, layer)
-            layer.update_weights(updated_weights)
+            self.optimizer.update_layer(grad, layer)

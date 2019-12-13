@@ -10,11 +10,11 @@ def softmax(x):
 
 class Loss:
 
-    def forward(self, y_true: np.array, logits: np.array) -> Tuple[np.array, np.array]:
+    def forward(self, y_true: np.ndarray, logits: np.ndarray) -> Tuple[np.ndarray, np.ndarray]:
         """Returns loss value and prediction."""
         pass
 
-    def backward(self, y_true: np.array, logits: np.array):
+    def backward(self, y_true: np.ndarray, logits: np.ndarray):
         pass
 
 

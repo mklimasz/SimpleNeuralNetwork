@@ -1,4 +1,5 @@
 import numpy as np
+import torch
 import torchvision
 from torch.utils.data import DataLoader
 
@@ -24,6 +25,9 @@ def get_dataset(batch_size):
 
 
 if __name__ == '__main__':
+    torch.random.manual_seed(1234)
+    np.random.seed(1234)
+
     epochs = 20
     lr = 0.001
     batch_size = 128
