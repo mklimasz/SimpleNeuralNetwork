@@ -4,13 +4,16 @@ Pure Python (+ numpy) implementation of chosen neural network components.
 PyTorch only for MNIST dataset.
 
 ## Components:
-* Linear Layer
+* Linear layer
 * ReLU
+* Dropout (implemented as inverted dropout)
 * CrossEntropy loss
 * Mini-batch SGD
+* Xavier uniform initialization
 * more to come :)
 
 ## Results:
 MNIST results (accuracy):
-* train - 72.24 %
-* test - 73.26 %
+
+* train - 96.81 %
+* test - 97.67 %

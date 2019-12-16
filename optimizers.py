@@ -8,10 +8,10 @@ class Optimizer:
     def __init__(self):
         self.cache = {}
 
-    def get_input(self, idx):
+    def load(self, idx):
         return self.cache[idx]
 
-    def add_input(self, idx, x):
+    def save(self, idx, x):
         self.cache[idx] = x
 
     def update_layer(self, grad: np.ndarray, layer: Layer):
