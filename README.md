@@ -15,5 +15,5 @@ PyTorch only for MNIST dataset.
 ## Results:
 MNIST results (accuracy):
 
-* train - 96.81 %
-* test - 97.67 %
+* train - 96.54 %
+* test - 96.32 %

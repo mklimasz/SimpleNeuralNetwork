@@ -98,7 +98,7 @@ class Dropout(Layer):
         self.keep_rate = keep_rate
 
     def forward(self, x: np.ndarray) -> Tuple[np.ndarray, List[Any], Dict[str, Any]]:
-        mask = (np.random.binomial(1, self.keep_rate, size=x.shape) / (1 - self.keep_rate)
+        mask = (np.random.binomial(1, self.keep_rate, size=x.shape) / self.keep_rate
                 if self.train else np.ones_like(x))
         return mask * x, [], {"mask": mask}
 
